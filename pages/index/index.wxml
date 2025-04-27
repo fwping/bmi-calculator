@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="card">
+      <view class="card-title">BMI计算器</view>
+      <form bindsubmit="calculateBMI">
+        <!-- 性别选择 -->
+        <view class="input-group">
+          <text class="input-label">性别</text>
+          <radio-group name="gender" bindchange="onGenderChange">
+            <label class="radio-label">
+              <radio value="male" checked="{{gender === 'male'}}" />男性
+            </label>
+            <label class="radio-label">
+              <radio value="female" checked="{{gender === 'female'}}" />女性
+            </label>
+          </radio-group>
+        </view>
+        
+        <!-- 年龄输入 -->
+        <view class="input-group">
+          <text class="input-label">年龄</text>
+          <input name="age" type="number" placeholder="请输入年龄（岁）" value="{{age}}" />
+        </view>
+        
+        <!-- 身高输入 -->
+        <view class="input-group">
+          <text class="input-label">身高</text>
+          <input name="height" type="digit" placeholder="请输入身高（厘米）" value="{{height}}" />
+        </view>
+        
+        <!-- 体重输入 -->
+        <view class="input-group">
+          <text class="input-label">体重</text>
+          <input name="weight" type="digit" placeholder="请输入体重（千克）" value="{{weight}}" />
+        </view>
+        
+        <!-- 提交按钮 -->
+        <button form-type="submit">计算BMI</button>
+      </form>
+    </view>
+    
+    <!-- BMI结果显示 -->
+    <view class="card" wx:if="{{showResult}}">
+      <view class="card-title">BMI计算结果</view>
+      
+      <!-- 图表容器 -->
+      <view class="chart-container">
+        <ec-canvas id="bmi-chart" canvas-id="bmi-chart" ec="{{ ec }}"></ec-canvas>
+      </view>
+      
+      <!-- 结果数值 -->
+      <view class="result-container">
+        <view class="bmi-value">
+          <text>BMI值: </text>
+          <text class="text-bold {{bmiCategory.className}}">{{bmiValue}}</text>
+        </view>
+        <view class="bmi-category">
+          <text>分类: </text>
+          <text class="text-bold {{bmiCategory.className}}">{{bmiCategory.name}}</text>
+        </view>
+        <view class="bmi-description">
+          {{bmiCategory.description}}
+        </view>
+      </view>
+    </view>
+    
+    <!-- BMI标准对照表 -->
+    <view class="card" wx:if="{{showResult}}">
+      <view class="card-title">BMI标准对照表</view>
+      <view class="table">
+        <view class="table-header">
+          <view class="table-cell">BMI范围</view>
+          <view class="table-cell">分类</view>
+        </view>
+        <view class="table-row" wx:for="{{bmiReferences}}" wx:key="range">
+          <view class="table-cell">{{item.range}}</view>
+          <view class="table-cell">
+            <text class="{{item.className}}">{{item.category}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view class="footer">
+      <text>© 2025 BMI计算器 - 保持健康生活</text>
+    </view>
+  </view>
+</scroll-view>

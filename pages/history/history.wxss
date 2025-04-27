@@ -1,0 +1,60 @@
+/* 历史记录页样式 */
+
+.no-record {
+  text-align: center;
+  padding: 50rpx;
+  color: #999;
+}
+
+.history-list {
+  margin-top: 20rpx;
+}
+
+.history-item {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-header {
+  margin-bottom: 10rpx;
+}
+
+.history-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.history-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15rpx 0;
+}
+
+.history-info {
+  margin-right: 20rpx;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5rpx;
+}
+
+.history-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+.history-bmi {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.history-category {
+  font-weight: bold;
+  font-size: 15px;
+} 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="64" height="64" fill="white"/>
+  <!-- 房子图标 -->
+  <g fill="none" stroke="#999999" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- 房子轮廓 -->
+    <path d="M32,14 L12,30 L12,52 L52,52 L52,30 L32,14 Z"/>
+    <!-- 门 -->
+    <rect x="26" y="36" width="12" height="16"/>
+    <!-- 窗户 -->
+    <rect x="18" y="32" width="8" height="8"/>
+    <rect x="38" y="32" width="8" height="8"/>
+  </g>
+</svg> 

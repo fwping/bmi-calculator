@@ -1,0 +1,99 @@
+/**app.wxss**/
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20rpx;
+  box-sizing: border-box;
+} 
+
+.card {
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #3498db;
+}
+
+.input-group {
+  margin-bottom: 20rpx;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 15px;
+  color: #666;
+}
+
+.footer {
+  text-align: center;
+  padding: 30rpx;
+  color: #999;
+  font-size: 12px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5rpx;
+  padding: 20rpx 0;
+  font-size: 16px;
+  margin: 20rpx 0;
+}
+
+button:active {
+  background-color: #2980b9;
+}
+
+button.secondary {
+  background-color: #e74c3c;
+}
+
+button.secondary:active {
+  background-color: #c0392b;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* BMI分类的颜色 */
+.bmi-underweight {
+  color: #3498db; /* 蓝色 - 偏瘦 */
+}
+
+.bmi-normal {
+  color: #2ecc71; /* 绿色 - 正常 */
+}
+
+.bmi-overweight {
+  color: #f39c12; /* 黄色 - 超重 */
+}
+
+.bmi-obese {
+  color: #e74c3c; /* 红色 - 肥胖 */
+}
+
+.bmi-severely-obese {
+  color: #c0392b; /* 深红色 - 重度肥胖 */
+}
